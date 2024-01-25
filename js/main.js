@@ -132,9 +132,12 @@ const racingBike = [
         weight: 9
     }
 ]
+const snack3Container = document.getElementById("snack-3");
 
 const [a, b, c, d, e] = racingBike;
 console.log(`La bici da corsa ${d.name} col peso di ${d.weight} Kg, è la bici più leggera.`);
+
+snack3Container.innerHTML = `La bici da corsa ${d.name} col peso di ${d.weight} Kg, è la bici più leggera.`
 
 // ?Snack 4
 
@@ -181,4 +184,33 @@ const teams = [
       score: 0,
       foul: 0,
     },
-  ];
+];
+
+const snack4Container = document.getElementById("snack-4");
+
+teams.forEach(team => {
+    team.score = generateNumber(90, 7);
+    team.foul = generateNumber(10, 0);
+    console.log(team);
+    snack4Container.innerHTML += `
+        <ul>
+            <li>
+                ${team.name}|
+                Score: ${team.score}
+                Foul: ${team.foul}
+            </li>
+        </ul>
+    `;
+});
+
+const snack4_2Container = document.getElementById("snack-4_2");
+
+const newTeams = teams.map((team) => {
+    const {name, foul} = team;
+    snack4_2Container.innerText += `
+        -${team.name}| Foul: ${team.foul}    
+    `;
+    return {name, foul};
+})
+console.log(newTeams);
+
