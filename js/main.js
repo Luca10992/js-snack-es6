@@ -9,28 +9,30 @@
 // - posto occupato.
 // Generiamo e stampiamo in console l'array di oggetti per i segnaposto.
 
-const vips = [
-    'Dwayne Johnson',
-    'Brad Pitt',
-    'Johnny Depp',
-    'Lady Gaga',
-    'Cristiano Ronaldo',
-    'Georgina Rodriguez',
-    'Chiara Ferragni',
-    'Fedez',
-    'George Clooney',
-    'Amal Clooney',
-    'Maneskin',
-];
+// !Svolgimento
 
-const guestList = vips.map((vip, index) => {
-    return {
-        numberTable: 'Tavolo Vip',
-        guestName: vip,
-        seatNumber: index + 1,
-    }
-});
-console.log(guestList);
+// const vips = [
+//     'Dwayne Johnson',
+//     'Brad Pitt',
+//     'Johnny Depp',
+//     'Lady Gaga',
+//     'Cristiano Ronaldo',
+//     'Georgina Rodriguez',
+//     'Chiara Ferragni',
+//     'Fedez',
+//     'George Clooney',
+//     'Amal Clooney',
+//     'Maneskin',
+// ];
+
+// const guestList = vips.map((vip, index) => {
+//     return {
+//         numberTable: 'Tavolo Vip',
+//         guestName: vip,
+//         seatNumber: index + 1,
+//     }
+// });
+// console.log(guestList);
 
 // ?Snack 2:
 
@@ -51,51 +53,132 @@ console.log(guestList);
 // | 102 | Piero della Francesca | 50     |
 // | 120 | Francesca da Polenta  | 84     |
 
-const students = [
+// !Svolgimento
+
+// const students = [
+//     {
+//         id: 213,
+//         name: "Marco della Rovere",
+//         grades: 78
+//     },
+//     {
+//         id: 110,
+//         name: "Paola Cortellessa",
+//         grades: 96
+//     },
+//     {
+//         id: 250,
+//         name: "Andrea Mantegna",
+//         grades: 48
+//     },
+//     {
+//         id: 145,
+//         name: "Gaia Borromini",
+//         grades: 74
+//     },
+//     {
+//         id: 196,
+//         name: "Luigi Grimaldello",
+//         grades: 68
+//     },
+//     {
+//         id: 102,
+//         name: "Piero della Francesca",
+//         grades: 50
+//     },
+//     {
+//         id: 120,
+//         name: "Francesca da Polenta",
+//         grades: 84
+//     }
+// ]
+
+// const nameUpperCase = students.map((student) => student.name.toUpperCase());
+// console.log(nameUpperCase);
+
+// const betterGrades = students.filter((student) => student.grades > 70);
+// console.log("Gli studenti migliori sono: ", betterGrades);
+
+// const listGradesId = students.filter((student) => student.grades > 70 && student.id > 120);
+// console.log("Gli studenti con id maggiore di 120 e il voto più alto sono: ", listGradesId);
+
+// ?Snack 3
+
+// Creare un array di oggetti:
+// Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+// Stampare in console la bici con peso minore utilizzando destructuring e template literal
+
+// !Svolgimento
+
+const racingBike = [
     {
-        id: 213,
-        name: "Marco della Rovere",
-        grades: 78
+        name: 'Casati',
+        weight: 11,
     },
     {
-        id: 110,
-        name: "Paola Cortellessa",
-        grades: 96
+        name: 'Atala',
+        weight: 10,
     },
     {
-        id: 250,
-        name: "Andrea Mantegna",
-        grades: 48
+        name: 'Olmo',
+        weight: 8,
     },
     {
-        id: 145,
-        name: "Gaia Borromini",
-        grades: 74
+        name: 'Bianchi',
+        weight: 7,
     },
     {
-        id: 196,
-        name: "Luigi Grimaldello",
-        grades: 68
-    },
-    {
-        id: 102,
-        name: "Piero della Francesca",
-        grades: 50
-    },
-    {
-        id: 120,
-        name: "Francesca da Polenta",
-        grades: 84
+        name: 'Colnago',
+        weight: 9
     }
 ]
 
-const nameUpperCase = students.map((student) => student.name.toUpperCase());
-console.log(nameUpperCase);
+const [a, b, c, d, e] = racingBike;
+console.log(`La bici da corsa ${d.name} col peso di ${d.weight} Kg, è la bici più leggera.`);
 
-const betterGrades = students.filter((student) => student.grades > 70);
-console.log("Gli studenti migliori sono: ", betterGrades);
+// ?Snack 4
 
-const listGradesId = students.filter((student) => student.grades > 70 && student.id > 120);
-console.log("Gli studenti con id maggiore di 120 e il voto più alto sono: ", listGradesId);
+// Usa l'array allegato alla traccia per completare i seguenti punti:
+// - Valorizzare le proprietà dei punti fatti e dei falli subiti con numeri randomici
+// - Creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti,
+//   recuperandoli con il destructuring, e stampiamo tutto in console.
 
+// !Svolgimento
 
+const teams = [
+    {
+      name: 'Team Turtle',
+      score: 0,
+      foul: 0,
+    },
+    {
+      name: 'Team Frog',
+      score: 0,
+      foul: 0,
+    },
+    {
+      name: 'Team Penguin',
+      score: 0,
+      foul: 0,
+    },
+    {
+      name: 'Team Hippopotamus',
+      score: 0,
+      foul: 0,
+    },
+    {
+      name: 'Team Seal',
+      score: 0,
+      foul: 0,
+    },
+    {
+      name: 'Team Crocodile',
+      score: 0,
+      foul: 0,
+    },
+    {
+      name: 'Team Dolphin',
+      score: 0,
+      foul: 0,
+    },
+  ];
